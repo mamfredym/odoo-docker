@@ -64,7 +64,7 @@ RUN set -x; \
         && apt-get -y install -f --no-install-recommends \
         && rm -rf /var/lib/apt/lists/* odoo.deb
 # install extra libs
-RUN pip3 install pysftp==0.2.8 polib==1.1.0
+RUN pip3 install num2words xlwt unicodecsv unidecode pysftp==0.2.8 polib==1.1.0
 # Copy entrypoint script and Odoo configuration file
 COPY ./entrypoint.sh /
 COPY ./odoo.conf /etc/odoo/
